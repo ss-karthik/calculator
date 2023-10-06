@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    gap: 10px;
+}
+
+.calc-display {
+    width: 415px;
+    height: 100px;
+    background-color: orange;
+    border-radius: 10px;
+}
+
+.button-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.cell {
+    width:100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gainsboro;
+    border-radius: 15px;
+}
