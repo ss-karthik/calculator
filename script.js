@@ -41,9 +41,20 @@ function evaluate() {
         let opp = arr[1];
         let num2 = parseInt(arr[2]);
         const result = operate(num1, num2, opp);
+        if (isNaN(result)) {
+            display.textContent = "Invalid Input";
+            resultDisplayed = true;
+            return;
+        }
+        if (result === Infinity) {
+            display.textContent = "Cannot divide by 0!";
+            resultDisplayed = true;
+            return;
+        }
         display.textContent = result;
         console.log(result);
         resultDisplayed = true;
+        return;
     }
     else {
         console.log("Too many operators");
