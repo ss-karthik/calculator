@@ -54,6 +54,9 @@ p {
     align-items: center;
     background-color: gainsboro;
     border-radius: 15px;
+}
+
+.cell button, .cellsp button, .cellop button {
     border: none;
     cursor: pointer;
     font-size: 30px;
