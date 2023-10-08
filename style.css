@@ -16,6 +16,7 @@ body {
     height: 100px;
     background-color: orange;
     border-radius: 10px;
+    overflow: scroll;
 }
 
 .button-section {
@@ -30,7 +31,7 @@ body {
     gap: 5px;
 }
 
-.cell {
+.cell, .cellsp, .cellop {
     width:100px;
     height: 100px;
     display: flex;
