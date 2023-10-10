@@ -25,6 +25,10 @@ body {
     align-items: center;
 }
 
+i {
+    color: black;
+}
+
 p {
     font-size: 30px;
     margin: 10px;

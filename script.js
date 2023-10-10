@@ -1,8 +1,18 @@
 let operatorPressed = false;
 let resultDisplayed = false;
+let decimalDisplayed = false;
+
+function defaults() {
+    display.textContent = '';
+    operatorPressed = false;
+    resultDisplayed = false;
+    decimalDisplayed = false;
+}
+
 
 let display = document.querySelector(".display");
 let buttons = document.querySelector(".button-section");
+
 buttons.addEventListener("click", function(event) {
     if (event.target.className == 'cell') {
         if (resultDisplayed) {
@@ -23,13 +33,18 @@ buttons.addEventListener("click", function(event) {
             display.textContent += event.target.textContent;
         }
     }
+    if (event.target.id == 'decimal' && !decimalDisplayed) {
+        display.textContent += event.target.textContent;
+        decimalDisplayed = true;
+    }
     if(event.target.id == 'equals') {
         evaluate();
     }
     if(event.target.id == "allclear") {
-        display.textContent = '';
-        operatorPressed = false;
-        resultDisplayed = false;
+        defaults();
+    }
+    if(event.target.id == "backspace") {
+        display.textContent = display.textContent.slice(0,-1);
     }
 });
 
