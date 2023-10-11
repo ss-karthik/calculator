@@ -13,6 +13,7 @@ function defaults() {
 let display = document.querySelector(".display");
 let buttons = document.querySelector(".button-section");
 
+
 buttons.addEventListener("click", function(event) {
     if (event.target.className == 'cell') {
         if (resultDisplayed) {
@@ -46,6 +47,11 @@ buttons.addEventListener("click", function(event) {
     if(event.target.id == "backspace") {
         display.textContent = display.textContent.slice(0,-1);
     }
+});
+
+let backspace = document.querySelector(".bi-backspace");
+backspace.addEventListener("click", function(){
+    display.textContent = display.textContent.slice(0,-1);
 });
 
 document.addEventListener("keydown", function(event) {
