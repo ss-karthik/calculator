@@ -60,6 +60,12 @@ p {
     border-radius: 15px;
 }
 
+
+#github i {
+    color: #24292e;
+    font-size: 45px;
+}
+
 button {
     border: none;
     cursor: pointer;

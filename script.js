@@ -58,6 +58,9 @@ document.addEventListener("keydown", function(event) {
     if (event.key == '/') {
         event.preventDefault();
     }
+    if (event.key == 'Enter') {
+        event.preventDefault();
+    }
     switcher(event.key);
 });
 
@@ -140,6 +143,17 @@ function switcher(key) {
                 display.textContent += ' / ';
             }
             break;
+        case "^":
+            if(!operatorPressed) {
+                operatorPressed = true;
+                display.textContent += ' ^ ';
+            }
+            else if (operatorPressed) {
+                evaluate();
+                resultDisplayed = false;
+                display.textContent += ' ^ ';
+            }
+            break;
         case ".":
             if (!decimalDisplayed) {
                 display.textContent += '.';
@@ -204,6 +218,10 @@ function operate (firstNum, secondNum, operation) {
         console.log("The division is " + division);
         return division;
     }
+    else if (operation === '^') {
+        let powered = power(firstNum, secondNum);
+        return powered;
+    }
 
 }
 
@@ -224,6 +242,6 @@ function divide (a, b) {
     return a/b;
 }
 
-function add (a, b) {
-    return a+b;
+function power (a, b) {
+    return Math.pow(a,b);
 }
