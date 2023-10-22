@@ -1,3 +1,8 @@
+if (localStorage.getItem('darkMode') === 'true') {
+    document.body.classList.add('dark-mode');
+}
+
+
 let operatorPressed = false;
 let resultDisplayed = false;
 let decimalDisplayed = false;
@@ -245,3 +250,15 @@ function divide (a, b) {
 function power (a, b) {
     return Math.pow(a,b);
 }
+
+function darkmode() {
+    let element = document.body;
+    element.classList.toggle("dark-mode");
+  
+    // Store the user's choice of light mode
+    if (element.classList.contains('dark-mode')) {
+      localStorage.setItem('darkMode', 'true');
+    } else {
+      localStorage.setItem('darkMode', 'false');
+    }
+  }

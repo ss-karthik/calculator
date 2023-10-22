@@ -3,7 +3,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: "Poppins", monospace;
 }
+
+.toggle {
+    align-self: flex-end;
+    border: none;
+    background-color: transparent;
+}
+
 
 .container {
     display: flex;
@@ -88,3 +96,39 @@ button {
         height: 70px;
     }
   }
+
+.dark-mode {
+    background-color: black;
+}
+
+.dark-mode .toggle i{
+    color: gainsboro;
+}
+
+.dark-mode h1 {
+    color: gainsboro;
+}
+
+.dark-mode .container {
+    background-color: gainsboro;
+}
+
+.dark-mode .cell, .dark-mode .cellsp, .dark-mode .cellop{
+    background-color: #1c1c1c;
+    color: gainsboro;
+}
+
+.dark-mode #backspace i {
+    color: gainsboro;
+}
+
+.dark-mode #allclear, .dark-mode #equals {
+    color: #1c1c1c;
+}
+
+.dark-mode #github {
+    background-color: #24292e;
+}
+.dark-mode #github i {
+    color: gainsboro;
+}
